@@ -1,0 +1,2 @@
+# Ignorar todas las carpetas build en cualquier nivel del proyecto
+**/build/
