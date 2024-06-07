@@ -2,7 +2,7 @@
 
 ## Avilable templates
 
-    - IEEETran
+- IEEETran
 
 ## Disclaimer
 
