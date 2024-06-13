@@ -1,0 +1,93 @@
+\documentclass[a0paper,portrait]{baposter}
+\usepackage[utf8]{inputenc}
+\usepackage{relsize}		% For \smaller
+\usepackage{url}			% For \url
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{import}
+\setlist{nolistsep}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}
+  {\settowidth}
+  {\setlength{\itemsep}{0pt plus 0.1pt}\settowidth}
+  {}{}
+\apptocmd{\thebibliography}
+  {\tiny}
+  {}{}
+
+\patchcmd{\thebibliography}
+  {\settowidth}
+  {\setlength{\parsep}{1pt}\setlength{\itemsep}{0pt plus 0.1pt}\settowidth}
+  {}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{logos/}}	% Root directory of the pictures
+% \tracingstats=2			% Enabled LaTeX logging with conditionals
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Utility functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Save space in lists. Use this after the opening of the list %%%%%%%%%%%%%%%%
+\newcommand{\compresslist}{
+	\setlength{\itemsep}{1pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+}
+
+%%%%% Document Start %%%%%%
+\begin{document}
+\sffamily
+\typeout{Poster rendering started}
+%%% General Poster Settings %%%
+%%% Eye Catcher, Title, Authors and University Images %%%
+\begin{poster}{
+    headerheight=0.15\textheight,
+	grid = false,
+    % grid=true,
+	% Option is left on true though the eyecatcher is not used. The reason is
+	% that we have a bit nicer looking title and author formatting in the headercol
+	% this way
+	eyecatcher = true,
+    bgColorOne=white, % Background color for the gradient on the left side of the poster
+    bgColorTwo=white, % Background color for the gradient on the left side of the poster
+    borderColor=cyan, % Border color
+    headerColorOne=cyan, % Background color for the header in the content boxes (left side)
+    headerFontColor=white, % Text color for the header text in the content boxes
+    boxColorOne=white, % Background color of the content boxes
+	% Only simple background color used, no shading, so boxColorTwo isn't necessary
+	headershape = smallrounded,
+	headerfont = \large\sf\bf,
+    headershade= plain,
+	textborder = roundedsmall,
+	background = plain,
+	headerborder = open,
+	columns = 6,
+    boxshade = plain,
+}
+%%% Eye Cacther %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\includegraphics[width=12em]{logos/logo.png}
+}
+%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\LARGE Title
+}
+%%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	Departament \\ Autors, \\ \textit{Institution} \\ place
+}
+%%% Logo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\includegraphics[width=12em]{logos/logo.png}
+}
+\color{black}

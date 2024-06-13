@@ -1,0 +1,90 @@
+%%%%%% Abstract %%%%%%
+\headerbox{1) Abstract}{name=abstract, span=6, column=0, row=0}{
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum justo vitae massa varius, nec varius lacus tincidunt. Nulla facilisi. Sed euismod justo et nunc tincidunt, eget faucibus est fermentum. Integer nec commodo nunc, in tincidunt leo. Vestibulum at dapibus felis. Duis et risus sed justo aliquam vulputate. Nullam nec dolor quis nisi pretium pellentesque. Suspendisse potenti. Ut porta sem a purus ullamcorper, quis finibus felis lacinia. In auctor tellus non felis tristique fringilla. Quisque sit amet aliquam metus. Donec nec justo elit. Morbi nec magna quis purus lobortis sodales. Sed non diam arcu. Sed sodales erat ut metus bibendum, nec ultricies lacus facilisis. Aenean scelerisque, quam nec tincidunt suscipit, mi sem tempor leo, eget volutpat nisi enim vel tortor.
+\vspace{2mm}
+\textbf{Keywords:} \textit{Lorem}, \textit{Ipsum}, \textit{Consectetur}.
+}
+%%%%%% Close Abstract %%%%%%
+
+%%%%%% Section 2 %%%%%
+\headerbox{2)}{name=b1, span=4, column=0, below=abstract,height=0.25}{
+  \begin{center}
+      Hi
+  \end{center}
+}
+%%%%%% CLOSE Section 2 %%%%%
+
+%%%%%% Section 3 %%%%%
+\headerbox{3)}{name=b2, span=2, column=4, below=abstract, height=0.120}{
+  \setcaptiontype{figure}% Fake a figure environment
+  \begin{center}
+      Hi
+  \end{center}
+}
+%%%%%% CLOSE Section 3 %%%%%
+
+%%% Section 4 %%%
+\headerbox{4)}{name=b3, span=2, column=4, below=b2, height=0.120}{
+  \begin{center}
+      Hi
+  \end{center}
+}
+%%% CLOSE Section 4 %%%
+
+%%%%%% Section 5 %%%%%
+\headerbox{6)}{name=b4, span=4, column=2, below=b3, height=0.25}{
+    \begin{center}
+        Hi
+    \end{center}
+}
+%%%%%% CLOSE Section 5 %%%%%
+
+%%%%%% Section 6 %%%%%
+\headerbox{5)}{name=b5, span=2, column=0, below=b3, height=0.25}{
+  \begin{center}
+      Hi
+  \end{center}
+}
+%%%%%% CLOSE Section 6 %%%%%
+
+%%%%%%% BOTTOM LOGOS %%%%%%%
+\headerbox{}{name=bottomlogo,span=6,column=0, above=bottom, textborder=none}{
+    \centering
+    {\includegraphics[width=0.1\linewidth]{logos/logo.png}}
+    \hfill
+    {\includegraphics[width=0.1\linewidth]{logos/logo.png}}
+    \hfill
+    {\includegraphics[width=0.1\linewidth]{logos/logo.png}}
+}
+%%%%%%% CLOSE BOTTOM LOGOS %%%%%%%
+
+%%%%%% Section 7 %%%%%
+\headerbox{7)}{name=b6, span=4, column=0, below=b4, above=bottomlogo,height=0.25}{
+  \begin{center}
+      Hi
+  \end{center}
+}
+%%%%%% CLOSE Section 7 %%%%%
+
+%%%%%% Section 8 %%%%%
+\headerbox{8)}{name=b7, span=2, column=4, below=b5, height=0.120}{
+  \setcaptiontype{figure}% Fake a figure environment
+  \begin{center}
+      Hi
+  \end{center}
+}
+%%%%%% CLOSE Section 8 %%%%%
+
+%%% Section 9 %%%
+\headerbox{9)}{name=b8, span=2, column=4, below=b7, above=bottomlogo, height=0.120}{
+
+    {\tiny \normalfont  % Make the whole text smaller
+    % \vspace{-1em} % Save some space at the beginning
+    \bibliographystyle{IEEEtran} % Use plain style
+    \begingroup
+        \renewcommand{\section}[2]{}%
+        \bibliography{b8}
+    \endgroup
+    }
+}
+%%% CLOSE Section 9 %%%
