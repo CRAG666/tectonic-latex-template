@@ -2,7 +2,16 @@
 
 ## Avilable templates
 
-- IEEETran
+### IEEETran
+
+![IEEETran preview](./IEEETran/src/.preview.png)
+
+
+### BaPoster
+
+
+![BaPoster preview](./BaPoster/src/.preview.png)
+
 
 ## Disclaimer
 
